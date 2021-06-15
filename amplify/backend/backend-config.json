@@ -1,0 +1,10 @@
+{
+  "auth": {
+    "appma50efb661": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false
+    }
+  }
+}
