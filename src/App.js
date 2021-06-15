@@ -2,6 +2,9 @@ import {Switch,Route} from 'react-router-dom';
 import Authentication from './Authentication'
 import LandinPage from './components/LandinPage'
 import './App.css';
+import HomePage from './components/HomePage';
+import Categorie from './components/Categorie';
+
 
 function App() {
   return (
@@ -14,8 +17,12 @@ function App() {
          <Authentication/>
        </Route>
        <Route exact path="/home">
-           homePage
+           <HomePage/>
        </Route>
+       <Route exact path="/categorie">
+          <Categorie/>
+       </Route>
+       
      </Switch>
     </div>
   );

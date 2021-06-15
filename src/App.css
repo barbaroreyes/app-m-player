@@ -55,5 +55,23 @@ margin: 20px;
     
     
     
+  }.categoria{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid;
+    margin :20px;
+    padding:20px;
+  }.categoria-box{
+    width :10%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin:100px;
+    border: 1px solid;
+  }.categoria-big-boz{
+    width:30%;
+    border: 1px solid;
   }
 }
