@@ -7,17 +7,16 @@ import Categorie from './components/Categorie';
 
 
 function App() {
+
+ 
   return (
     <div className="App">
      <Switch>
      <Route exact path="/">
          <LandinPage/>
        </Route>
-       <Route exact path="/auth">
-         <Authentication/>
-       </Route>
        <Route exact path="/home">
-           <HomePage/>
+         <Authentication/>
        </Route>
        <Route exact path="/categorie">
           <Categorie/>

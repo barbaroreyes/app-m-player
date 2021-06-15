@@ -5,6 +5,7 @@ import awsconfi from './aws-exports';
 import {withAuthenticator } from '@aws-amplify/ui-react';
 Amplify.configure(awsconfi)
 const Authentication = () => {
+  
   return (
     <div>
       <HomePage/>

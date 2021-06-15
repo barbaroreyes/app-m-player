@@ -5,7 +5,7 @@ const LandinPage = () => {
     return (
         <header className='br2 ma2'>
           <div>
-          <Link to='/auth'>Login</Link>
+          <Link to='/home'>Login</Link>
            <h1>Welcome</h1>
           </div>
            <div className='anuncios'>
