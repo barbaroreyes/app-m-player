@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "appma",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authappma50efb661",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

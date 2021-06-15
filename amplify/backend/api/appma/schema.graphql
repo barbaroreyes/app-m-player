@@ -1,0 +1,9 @@
+type Video @model {
+  id: ID!
+  title: String!
+  owner: String!
+  description: String!
+  filePath: String!
+  time: String!
+  like: Int!
+}
