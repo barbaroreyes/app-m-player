@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { API, graphqlOperation,Storage } from 'aws-amplify';
+import { API, graphqlOperation } from 'aws-amplify';
 import {listVideos} from './graphql/queries'
 import {Switch,Route} from 'react-router-dom';
 import Authentication from './Authentication'
@@ -11,12 +11,16 @@ import Categorie from './components/Categorie';
 
 function App() {
   const [media,setMedia] =useState([])
- const fetchVideos = async () => {
-  const videoData = await API.graphql(graphqlOperation(listVideos))
-  const videosList = videoData.data.listVideos.items
-  console.log('media list',videosList)
-  setMedia(videosList)
- }
+  const  fetchVideos = async() =>{
+    try {
+      const videoData = await API.graphql(graphqlOperation(listVideos))
+      const videoList = videoData.data.listVideos.items
+      console.log('videos list', videoList)
+     setMedia(videoList)
+    } catch (error) {
+      console.log('error',error)
+    }
+    }
  useEffect(()=>{
   fetchVideos()
  },[])
