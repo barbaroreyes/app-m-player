@@ -12,6 +12,10 @@ import Categorie from './components/Categorie';
 function App() {
   const [media,setMedia] =useState([])
   const [mediaUrl,setMediaUrl] = useState('')
+  useEffect(()=>{
+    fetchVideos()
+   },[])
+
   const  fetchVideos = async() =>{
     try {
       const videoData = await API.graphql(graphqlOperation(listVideos))
@@ -31,9 +35,7 @@ function App() {
     // }
 
 
- useEffect(()=>{
-  fetchVideos()
- },[])
+
   return (
     <div className="App">
      <Switch>
