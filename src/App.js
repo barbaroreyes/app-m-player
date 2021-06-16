@@ -34,7 +34,7 @@ function App() {
          <Authentication/>
        </Route>
        <Route exact path="/categorie">
-          <Categorie/>
+          <Categorie data={media}/>
        </Route>
        
      </Switch>
