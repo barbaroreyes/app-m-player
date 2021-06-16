@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "appma50efb661": {}
+      },
+      "function": {
+        "S3Trigger64849bfd": {
+          "deploymentBucketName": "amplify-appma-dev-150826-deployment",
+          "s3Key": "amplify-builds/S3Trigger64849bfd-55392f5254463538674d-build.zip"
+        }
       }
     }
   }

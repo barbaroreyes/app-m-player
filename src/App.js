@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import { API, graphqlOperation } from 'aws-amplify';
+import { API, graphqlOperation,Storage } from 'aws-amplify';
 import {listVideos} from './graphql/queries'
 import {Switch,Route} from 'react-router-dom';
 import Authentication from './Authentication'
@@ -11,6 +11,7 @@ import Categorie from './components/Categorie';
 
 function App() {
   const [media,setMedia] =useState([])
+  const [mediaUrl,setMediaUrl] = useState('')
   const  fetchVideos = async() =>{
     try {
       const videoData = await API.graphql(graphqlOperation(listVideos))
@@ -21,6 +22,15 @@ function App() {
       console.log('error',error)
     }
     }
+    // const videoFile= media[id].filePath;
+    // try {
+    //   const fileAcc = await Storage.get(videoFile,{expires:60})
+    //   setMediaUrl(fileAcc)
+    // } catch (error) {
+    //   console.log('error ftch url',error)
+    // }
+
+
  useEffect(()=>{
   fetchVideos()
  },[])

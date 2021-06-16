@@ -5,7 +5,7 @@ const Categorie = (props) => {
   console.log(props)
   return (<div>
        <div>
-           <Link to='/home'>Back</Link>
+           <Link to='/'>Back</Link>
            
        </div>
     <div className="categoria">
