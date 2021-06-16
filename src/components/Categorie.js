@@ -10,11 +10,11 @@ const Categorie = (props) => {
        </div>
     <div className="categoria">
       {props.data.map((item,i)=>{
-        return(<div key={i}>
-                <div className="categoria-box" >{item.title}</div>
-                <div className="categoria-box">{item.owner}</div>
-                <div className="categoria-box">{item.description}</div>
-                <div className="categoria-box">{item.time}</div>
+        return(<div className="new grow shadow-5" key={i}>
+                <div className="categoria-box" >Category :  {item.title}</div>
+                <div className="categoria-box">owner :   {item.owner}</div>
+                <div className="categoria-box">description  :{item.description}</div>
+                <div className="categoria-box">Time  :  {item.time}</div>
                 <div className="categoria-big-boz" >
                    <ReactPLayer
                    controls
