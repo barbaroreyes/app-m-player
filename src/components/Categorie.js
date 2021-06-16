@@ -3,7 +3,8 @@ import {Link} from 'react-router-dom'
 const Categorie = () => {
   return (<>
        <div>
-           <Link to='/'>Home</Link>
+           <Link to='/home'>Back</Link>
+           
        </div>
     <div className="categoria">
         <div className="categoria-big-boz" >clip image to see</div>

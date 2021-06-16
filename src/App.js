@@ -1,14 +1,25 @@
+import React,{useState,useEffect} from 'react';
+import { API, graphqlOperation,Storage } from 'aws-amplify';
+import {listVideos} from './graphql/queries'
 import {Switch,Route} from 'react-router-dom';
 import Authentication from './Authentication'
 import LandinPage from './components/LandinPage'
 import './App.css';
-import HomePage from './components/HomePage';
 import Categorie from './components/Categorie';
 
 
-function App() {
 
- 
+function App() {
+  const [media,setMedia] =useState([])
+ const fetchVideos = async () => {
+  const videoData = await API.graphql(graphqlOperation(listVideos))
+  const videosList = videoData.data.listVideos.items
+  console.log('media list',videosList)
+  setMedia(videosList)
+ }
+ useEffect(()=>{
+  fetchVideos()
+ },[])
   return (
     <div className="App">
      <Switch>
