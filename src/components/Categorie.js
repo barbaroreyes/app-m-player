@@ -14,6 +14,7 @@ const Categorie = (props) => {
                 <div className="categoria-box" >Category :  {item.title}</div>
                 <div className="categoria-box">owner :   {item.owner}</div>
                 <div className="categoria-box">description  :{item.description}</div>
+                <div className="categoria-box" on onClick={()=>console.log('clicked')}>like  :  {item.like}</div>
                 <div className="categoria-box">Time  :  {item.time}</div>
                 <div className="categoria-big-boz" >
                    <ReactPLayer
