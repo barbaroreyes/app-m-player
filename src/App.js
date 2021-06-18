@@ -6,6 +6,7 @@ import Authentication from './Authentication'
 import LandinPage from './components/LandinPage'
 import './App.css';
 import Categorie from './components/Categorie';
+import HomePage from './components/HomePage';
 
 
 
@@ -39,8 +40,7 @@ function App() {
       const videoData = await API.graphql(graphqlOperation(listVideos))
       const videoList = videoData.data.listVideos.items
       console.log('videos list', videoList)
-      
-     setMedia(videoList)
+      setMedia(videoList)
     } catch (error) {
       console.log('error',error)
     }
@@ -51,6 +51,7 @@ function App() {
      <Switch>
      <Route exact path="/">
          <LandinPage/>
+         
        </Route>
        <Route exact path="/home">
          <Authentication/>

@@ -44,12 +44,13 @@ background: grey;
   }
   .anuncios-box{
     background: red;
-    width: 23.3%;
-    /* height: 600px; */
+    width: 25.3%;
+    height: 400px;
     display: flex;
-    justify-content: center;
+
+    /* justify-content: center;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
     border-radius: 15px 60px;
     
   }
@@ -94,6 +95,7 @@ background: grey;
   }
   img{
     width:100%;
+    border-radius: 15px 60px;
   }
   .new{
     text-transform: uppercase;
